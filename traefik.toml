@@ -3,21 +3,27 @@
   address = ":80"
     [entryPoints.http.redirect]
     entryPoint = "https"
-  [entryPoints.https]
-  address = ":443"
-    [entryPoints.https.tls]
+  # [entryPoints.https]
+  # address = ":443"
+  #   [entryPoints.https.tls]
 
 
 [web]
 address = ":8080"
 
-[acme]
+# [acme]
+#
+# # Email address used for registration
+# #
+# # Required
+# #
+# email = "me@kca.id.au"
+# caServer = "https://acme-staging.api.letsencrypt.org/directory"
+# storageFile = "/acme.json"
+# entryPoint = "https"
+[etcd]
+endpoint = "10.0.1.227:2379"
 
-# Email address used for registration
-#
-# Required
-#
-email = "me@kca.id.au"
-caServer = "https://acme-staging.api.letsencrypt.org/directory"
-storageFile = "acme.json"
-entryPoint = "https"
+watch = true
+
+prefix = "/traefik"
