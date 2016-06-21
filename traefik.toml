@@ -1,3 +1,7 @@
+defaultEntryPoints = ["http"]
+logLevel = "DEBUG"
+
+
 [entryPoints]
   [entryPoints.http]
   address = ":80"
