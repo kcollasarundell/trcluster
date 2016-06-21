@@ -8,6 +8,8 @@
     [entryPoints.https.tls]
 
 
+[web]
+address = ":8080"
 
 [acme]
 
