@@ -4,7 +4,7 @@ logLevel = "DEBUG"
 
 [entryPoints]
   [entryPoints.http]
-  address = ":80"
+  address = ":8081"
     [entryPoints.http.redirect]
     entryPoint = "https"
   # [entryPoints.https]
@@ -13,7 +13,7 @@ logLevel = "DEBUG"
 
 
 [web]
-address = ":8080"
+address = ":8082"
 
 # [acme]
 #
@@ -27,7 +27,5 @@ address = ":8080"
 # entryPoint = "https"
 [etcd]
 endpoint = "10.0.1.227:2379"
-
 watch = true
-
 prefix = "/traefik"
