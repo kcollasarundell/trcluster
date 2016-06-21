@@ -25,5 +25,5 @@ address = ":8080"
 endpoint = "10.0.1.227:2379"
 
 watch = true
-
+tls = false
 prefix = "/traefik"
