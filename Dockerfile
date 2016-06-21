@@ -5,4 +5,4 @@ COPY traefik.toml /
 EXPOSE 80
 EXPOSE 8080
 EXPOSE 443
-ENTRYPOINT ["/traefik -c /traefik.toml"]
+ENTRYPOINT ["/traefik -c /traefik.toml --etcd --etcd.endpoint ${COREOS_PRIVATE_IPV4}:2379"]
