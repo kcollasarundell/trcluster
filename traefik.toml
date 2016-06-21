@@ -1,0 +1,21 @@
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+
+
+
+[acme]
+
+# Email address used for registration
+#
+# Required
+#
+email = "me@kca.id.au"
+caServer = "https://acme-staging.api.letsencrypt.org/directory"
+storageFile = "acme.json"
+entryPoint = "https"
